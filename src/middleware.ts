@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale } from "./i18n/config";
+import { locales, defaultLocale, ValidLocale } from "./i18n/config";
 
-function getLocale(request: NextRequest): string {
+function getLocale(request: NextRequest): ValidLocale {
   // Check if the Accept-Language header exists
   const acceptLanguage = request.headers.get("accept-language");
 
@@ -12,12 +12,13 @@ function getLocale(request: NextRequest): string {
       .map((locale) => locale.split(";")[0].trim());
 
     // Find the first locale that matches our supported locales
-    const matchedLocale = userLocales.find((locale) =>
-      locales.includes(locale.substring(0, 2) as any)
-    );
+    const matchedLocale = userLocales.find((locale) => {
+      const shortLocale = locale.substring(0, 2);
+      return locales.includes(shortLocale as ValidLocale);
+    });
 
     if (matchedLocale) {
-      return matchedLocale.substring(0, 2);
+      return matchedLocale.substring(0, 2) as ValidLocale;
     }
   }
 

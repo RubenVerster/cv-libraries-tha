@@ -19,15 +19,15 @@ jest.mock("@/components/LocationAutocomplete", () => {
 // Mock the useI18n hook
 jest.mock("@/hooks/useI18n", () => ({
   useI18n: () => ({
-    t: (key) => key,
+    t: (key: string) => key,
     isLoading: false,
   }),
 }));
 
 describe("JobsSearch", () => {
   const defaultProps = {
-    locale: "en",
-    initialView: "location",
+    locale: "en" as const,
+    initialView: "location" as const,
   };
 
   it("renders the loading state initially", () => {

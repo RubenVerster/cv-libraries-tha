@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Logo from "../Logo";
+import "@testing-library/jest-dom";
 
 describe("Logo", () => {
   it("renders the logo image correctly", () => {

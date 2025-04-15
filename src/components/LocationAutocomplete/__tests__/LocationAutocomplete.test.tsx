@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import LocationAutocomplete from "../index";
+import "@testing-library/jest-dom";
 
 // Mock the fetch function
 global.fetch = jest.fn();
