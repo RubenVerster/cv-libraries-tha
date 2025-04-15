@@ -12,15 +12,16 @@ export const metadata: Metadata = {
   description: "Find jobs by location or industry",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params?: { locale?: string };
-}>) {
+  params?: Promise<{ locale?: string }>;
+}) {
   // Use the locale from params or default to 'en'
-  const locale = params?.locale || defaultLocale;
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale || defaultLocale;
 
   return (
     <html lang={locale}>

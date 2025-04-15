@@ -8,13 +8,15 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function RootLayout(props: {
+export default async function RootLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
-  params: { locale: ValidLocale };
+  params: Promise<{ locale: ValidLocale }>;
 }) {
-  // Extract children and locale to avoid direct property access
-  const { children } = props;
-  const locale = props.params.locale;
+  // Extract locale to avoid direct property access
+  const { locale } = await params;
 
   return (
     <TranslationProvider locale={locale}>

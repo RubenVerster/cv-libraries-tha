@@ -1,17 +1,16 @@
 import { ValidLocale } from "@/i18n/config";
 import JobsSearch from "@/components/JobsSearch";
 
-export default function JobsPage({
+export default async function JobsPage({
   params,
   searchParams,
 }: {
-  params: { locale: ValidLocale };
-  searchParams: { view?: string };
+  params: Promise<{ locale: ValidLocale }>;
+  searchParams: Promise<{ view?: string }>;
 }) {
-  const { locale } = params;
-  const viewParam = searchParams.view;
-
-  const view = viewParam || "location";
+  // Await the params and searchParams
+  const { locale } = await params;
+  const { view = "location" } = await searchParams;
 
   return (
     <JobsSearch locale={locale} initialView={view as "location" | "industry"} />
