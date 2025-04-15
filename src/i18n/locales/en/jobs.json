@@ -1,0 +1,57 @@
+{
+  "keywords": {
+    "label": "Keywords / Job Title / Job Ref",
+    "placeholder": "e.g. Sales Executive"
+  },
+  "location": {
+    "label": "Location",
+    "placeholder": "e.g. town or postcode"
+  },
+  "distance": {
+    "label": "Distance",
+    "options": {
+      "5": "5 miles",
+      "10": "10 miles",
+      "15": "15 miles",
+      "20": "20 miles",
+      "30": "30 miles"
+    }
+  },
+  "search": {
+    "button": "Find jobs now"
+  },
+  "tabs": {
+    "location": "Jobs by Location",
+    "industry": "Jobs by Industry"
+  },
+  "categories": {
+    "industry": [
+      "Accounting",
+      "Administration",
+      "Agriculture",
+      "Arts",
+      "Automotive",
+      "Catering",
+      "Distribution",
+      "Driving",
+      "Education",
+      "Electronics",
+      "Engineering",
+      "Financial Services"
+    ],
+    "location": [
+      "Aberdeen",
+      "Basingstoke",
+      "Berkshire",
+      "Birmingham",
+      "Bradford",
+      "Bristol",
+      "Derby",
+      "Doncaster",
+      "Edinburgh",
+      "Essex",
+      "Exeter",
+      "Glasgow"
+    ]
+  }
+}

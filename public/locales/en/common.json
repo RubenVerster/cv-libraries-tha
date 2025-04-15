@@ -1,0 +1,10 @@
+{
+  "appName": "CV-Library",
+  "search": "Search",
+  "location": "Location",
+  "industry": "Industry",
+  "jobsByLocation": "Jobs by Location",
+  "jobsByIndustry": "Jobs by Industry",
+  "enterLocation": "Enter a location",
+  "findJobs": "Find Jobs"
+}

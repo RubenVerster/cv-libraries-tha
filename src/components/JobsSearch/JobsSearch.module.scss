@@ -1,0 +1,88 @@
+.jobsSearch {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchForm {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.formGroup {
+  flex: 1;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+    border-color: #0070f3;
+  }
+}
+
+.searchButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: #0060df;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Tabs styles moved to TabsComponent.module.scss */
+
+.placeholder {
+  height: 2.5rem;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+/* Categories styles moved to TabsComponent.module.scss */
+
+.loading {
+  width: 100%;
+}
+
+.error {
+  color: #dc3545;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+}

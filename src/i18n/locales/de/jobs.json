@@ -1,0 +1,57 @@
+{
+  "keywords": {
+    "label": "Schlüsselwörter / Stellenbezeichnung / Stellenreferenz",
+    "placeholder": "z.B. Vertriebsleiter"
+  },
+  "location": {
+    "label": "Standort",
+    "placeholder": "z.B. Stadt oder Postleitzahl"
+  },
+  "distance": {
+    "label": "Entfernung",
+    "options": {
+      "5": "5 Meilen",
+      "10": "10 Meilen",
+      "15": "15 Meilen",
+      "20": "20 Meilen",
+      "30": "30 Meilen"
+    }
+  },
+  "search": {
+    "button": "Jobs finden"
+  },
+  "tabs": {
+    "location": "Jobs nach Standort",
+    "industry": "Jobs nach Branche"
+  },
+  "categories": {
+    "industry": [
+      "Buchhaltung",
+      "Verwaltung",
+      "Landwirtschaft",
+      "Kunst",
+      "Automobil",
+      "Gastronomie",
+      "Vertrieb",
+      "Fahrer",
+      "Bildung",
+      "Elektronik",
+      "Ingenieurwesen",
+      "Finanzdienstleistungen"
+    ],
+    "location": [
+      "Aberdeen",
+      "Basingstoke",
+      "Berkshire",
+      "Birmingham",
+      "Bradford",
+      "Bristol",
+      "Derby",
+      "Doncaster",
+      "Edinburgh",
+      "Essex",
+      "Exeter",
+      "Glasgow"
+    ]
+  }
+}

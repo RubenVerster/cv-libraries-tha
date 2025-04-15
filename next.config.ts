@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // App Router handles i18n through middleware
 };
 
 export default nextConfig;
