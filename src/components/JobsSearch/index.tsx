@@ -79,7 +79,6 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
     location: [],
   };
 
-  // Get the appropriate category list based on the active tab
   const categoryList = Array.isArray(categoriesObj[activeTab])
     ? categoriesObj[activeTab]
     : [];
