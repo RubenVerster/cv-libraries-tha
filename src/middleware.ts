@@ -26,7 +26,7 @@ function getLocale(request: NextRequest): ValidLocale {
   return defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest): NextResponse | undefined {
   const pathname = request.nextUrl.pathname;
 
   // Check if there is any supported locale in the pathname
@@ -47,6 +47,9 @@ export function middleware(request: NextRequest) {
       )
     );
   }
+
+  // If the pathname has a locale, we don't need to redirect
+  return undefined;
 }
 
 export const config = {

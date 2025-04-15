@@ -10,7 +10,7 @@ const Logo = () => {
       className={styles.logo}
       width={500}
       height={200}
-      priority
+      loading="eager"
     />
   );
 };
