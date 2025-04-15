@@ -24,12 +24,14 @@ export default function LanguageSwitcher({
   };
 
   return (
-    <div className="language-switcher">
+    <div className={styles.languageSwitcher}>
       {locales.map((locale) => (
         <Link
           key={locale}
           href={redirectedPathName(locale)}
-          className={currentLocale === locale ? "active" : ""}
+          className={`${styles.localeLink} ${
+            currentLocale === locale ? styles.active : ""
+          }`}
         >
           {locale.toUpperCase()}
         </Link>

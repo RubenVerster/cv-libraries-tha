@@ -21,7 +21,7 @@ export default function RootLayout(props: {
       <div className="locale-content">
         <header className="site-header">
           <div className="container">
-            <div style={{ position: "absolute", top: "1rem", right: "1rem" }}>
+            <div className="language-switcher-container">
               <LanguageSwitcher currentLocale={locale} />
             </div>
             <Logo />

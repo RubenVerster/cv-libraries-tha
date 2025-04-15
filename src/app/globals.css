@@ -62,16 +62,11 @@ a:hover {
 }
 
 
-.language-switcher {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.language-switcher a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.875rem;
-  text-transform: uppercase;
+.language-switcher-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
 }
 
 .site-footer {
