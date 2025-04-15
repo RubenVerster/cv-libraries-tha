@@ -61,17 +61,7 @@ a:hover {
   text-align: center;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.logo {
-  max-width: 250px;
-  height: auto;
-  margin-bottom: 1rem;
-}
 
 .language-switcher {
   display: flex;

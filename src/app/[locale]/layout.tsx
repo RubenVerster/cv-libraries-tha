@@ -2,7 +2,7 @@
 import { ValidLocale, locales } from "@/i18n/config";
 import TranslationProvider from "@/components/TranslationProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Image from "next/image";
+import Logo from "@/components/LogoComponent/Logo";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -24,15 +24,8 @@ export default function RootLayout(props: {
             <div style={{ position: "absolute", top: "1rem", right: "1rem" }}>
               <LanguageSwitcher currentLocale={locale} />
             </div>
-            <div className="logo-container">
-              <Image
-                src="/logo.svg"
-                alt="CV-Library"
-                className="logo"
-                width={250}
-                height={100}
-              />
-            </div>
+            <Logo />
+            <div className="logo-container"></div>
           </div>
         </header>
         <main>{children}</main>
