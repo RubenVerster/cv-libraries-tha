@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { locales, ValidLocale } from "@/i18n/config";
 import styles from "./LanguageSwitcher.module.scss";
