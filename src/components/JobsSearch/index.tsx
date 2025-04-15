@@ -36,23 +36,23 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
   if (isLoading || !i18n) {
     return (
       <div className={styles.loading}>
-        <div className="search-container">
+        <div className={styles.searchContainer}>
           <div className="container">
-            <form className="search-form">
-              <div className="form-row">
-                <div className="form-group">
+            <form className={styles.searchForm}>
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
                   <label>Loading...</label>
-                  <div className="placeholder" />
+                  <div className={styles.placeholder} />
                 </div>
-                <div className="form-group">
+                <div className={styles.formGroup}>
                   <label>Loading...</label>
-                  <div className="placeholder" style={{ height: "38px" }} />
+                  <div className={styles.placeholder} />
                 </div>
-                <div className="form-group" style={{ maxWidth: "150px" }}>
+                <div className={styles.distanceGroup}>
                   <label>Loading...</label>
-                  <div className="placeholder" />
+                  <div className={styles.placeholder} />
                 </div>
-                <button type="button" className="search-button" disabled>
+                <button type="button" className={styles.searchButton} disabled>
                   Loading...
                 </button>
               </div>
@@ -86,18 +86,18 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
 
   return (
     <div>
-      <div className="search-container">
+      <div className={styles.searchContainer}>
         <div className="container">
-          <form onSubmit={handleSearch} className="search-form">
-            <div className="form-row">
-              <div className="form-group">
+          <form onSubmit={handleSearch} className={styles.searchForm}>
+            <div className={styles.formRow}>
+              <div className={styles.formGroup}>
                 <label>{t("jobs:keywords.label")}</label>
                 <input
                   type="text"
                   placeholder={t("jobs:keywords.placeholder")}
                 />
               </div>
-              <div className="form-group">
+              <div className={styles.formGroup}>
                 <label>{t("jobs:location.label")}</label>
                 <LocationAutocomplete
                   value={location}
@@ -108,7 +108,7 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
                   placeholder={t("jobs:location.placeholder")}
                 />
               </div>
-              <div className="form-group" style={{ maxWidth: "150px" }}>
+              <div className={styles.distanceGroup}>
                 <label>{t("jobs:distance.label")}</label>
                 <select>
                   <option>{t("jobs:distance.options.15")}</option>
@@ -118,7 +118,7 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
                   <option>{t("jobs:distance.options.30")}</option>
                 </select>
               </div>
-              <button type="submit" className="search-button">
+              <button type="submit" className={styles.searchButton}>
                 {t("jobs:search.button")}
               </button>
             </div>

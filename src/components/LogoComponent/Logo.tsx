@@ -7,8 +7,8 @@ const Logo = () => {
       src="/logo.svg"
       alt="CV-Library"
       className="logo"
-      width={250}
-      height={100}
+      width={500}
+      height={200}
     />
   );
 };
