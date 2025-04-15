@@ -1,6 +1,6 @@
 .searchContainer {
   background-color: var(--primary-color);
-  padding: 0 0 2rem;
+  padding: 2.5rem 0;
   color: white;
   margin-top: -1rem;
 }
@@ -13,15 +13,29 @@
   margin: 0 auto;
 }
 
-.formRow {
+.keywordsRow {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.locationRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-end;
   }
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
 }
 
 .formGroup {
@@ -30,17 +44,28 @@
   flex: 1;
 
   label {
-    margin-bottom: 0.25rem;
-    font-weight: 400;
-    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+    display: block;
   }
 
-  input, select {
-    padding: 0.5rem;
-    border: 1px solid var(--gray-300);
+  input,
+  select {
+    padding: 0.75rem 1rem;
+    border: none;
     border-radius: 0;
-    font-size: 0.875rem;
-    height: 38px;
+    font-size: 1rem;
+    font-weight: 300;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #333;
+    &::placeholder {
+      color: #777;
+      font-weight: 300;
+    }
   }
 }
 
@@ -51,17 +76,28 @@
   max-width: 150px;
 
   label {
-    margin-bottom: 0.25rem;
-    font-weight: 400;
-    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+    display: block;
   }
 
-  input, select {
-    padding: 0.5rem;
-    border: 1px solid var(--gray-300);
+  input,
+  select {
+    padding: 0.75rem 1rem;
+    border: none;
     border-radius: 0;
-    font-size: 0.875rem;
-    height: 38px;
+    font-size: 1rem;
+    font-weight: 300;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #333;
+    &::placeholder {
+      color: #777;
+      font-weight: 300;
+    }
   }
 }
 
@@ -69,10 +105,9 @@
   background-color: var(--accent-color);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  height: 38px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,11 +115,13 @@
   border-radius: 4px;
   white-space: nowrap;
   position: relative;
+  cursor: pointer;
+  min-width: 180px;
+  height: 50px;
 
   &::after {
-    content: '\1F50D';
-    font-size: 0.875rem;
-    margin-left: 0.25rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
   }
 
   &:hover {
@@ -92,11 +129,11 @@
   }
 }
 
-
 .placeholder {
-  height: 38px;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .loading {
@@ -105,11 +142,11 @@
   .searchButton {
     opacity: 0.7;
     cursor: not-allowed;
-
-    &::after {
-      display: none;
-    }
   }
+}
+
+.searchIcon {
+  margin-left: 0.5rem;
 }
 
 .error {

@@ -7,6 +7,8 @@ import { useI18n } from "@/hooks/useI18n";
 import LocationAutocomplete from "@/components/LocationAutocomplete";
 import TabsComponent from "@/components/TabsComponent";
 import styles from "./JobsSearch.module.scss";
+import { BiSearch } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
 
 interface JobsSearchProps {
   locale: ValidLocale;
@@ -29,6 +31,8 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would navigate to search results
+    //open new tab
+    window.open("https://rubenverster.github.io/flip-the-coin/", "_blank");
     console.log("Searching with:", { activeTab, location });
   };
 
@@ -39,11 +43,16 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
         <div className={styles.searchContainer}>
           <div className="container">
             <form className={styles.searchForm}>
-              <div className={styles.formRow}>
+              {/* Keywords row */}
+              <div className={styles.keywordsRow}>
                 <div className={styles.formGroup}>
                   <label>Loading...</label>
                   <div className={styles.placeholder} />
                 </div>
+              </div>
+
+              {/* Location and distance row */}
+              <div className={styles.locationRow}>
                 <div className={styles.formGroup}>
                   <label>Loading...</label>
                   <div className={styles.placeholder} />
@@ -52,6 +61,10 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
                   <label>Loading...</label>
                   <div className={styles.placeholder} />
                 </div>
+              </div>
+
+              {/* Button row */}
+              <div className={styles.buttonRow}>
                 <button type="button" className={styles.searchButton} disabled>
                   Loading...
                 </button>
@@ -88,7 +101,8 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
       <div className={styles.searchContainer}>
         <div className="container">
           <form onSubmit={handleSearch} className={styles.searchForm}>
-            <div className={styles.formRow}>
+            {/* Keywords row */}
+            <div className={styles.keywordsRow}>
               <div className={styles.formGroup}>
                 <label>{t("jobs:keywords.label")}</label>
                 <input
@@ -96,6 +110,10 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
                   placeholder={t("jobs:keywords.placeholder")}
                 />
               </div>
+            </div>
+
+            {/* Location and distance row */}
+            <div className={styles.locationRow}>
               <div className={styles.formGroup}>
                 <label>{t("jobs:location.label")}</label>
                 <LocationAutocomplete
@@ -110,15 +128,20 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
               <div className={styles.distanceGroup}>
                 <label>{t("jobs:distance.label")}</label>
                 <select>
+                  <option>{t("jobs:distance.options.15")}</option>
                   <option>{t("jobs:distance.options.5")}</option>
                   <option>{t("jobs:distance.options.10")}</option>
-                  <option>{t("jobs:distance.options.15")}</option>
                   <option>{t("jobs:distance.options.20")}</option>
                   <option>{t("jobs:distance.options.30")}</option>
                 </select>
               </div>
+            </div>
+
+            {/* Button row */}
+            <div className={styles.buttonRow}>
               <button type="submit" className={styles.searchButton}>
-                {t("jobs:search.button")}
+                {t("jobs:search.button")}{" "}
+                <FaSearch className={styles.searchIcon} />
               </button>
             </div>
           </form>
