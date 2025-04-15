@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV-Library Frontend
+
+## Live Demo
+
+The application is deployed and accessible at: [https://cv-libraries-tha.vercel.app/en/jobs](https://cv-libraries-tha.vercel.app/en/jobs)
+
+## Project Overview
+
+This is a Next.js application that provides a frontend for CV-Library, allowing users to search for jobs by location or industry. The application features a responsive design, internationalization support, and a modular architecture.
+
+## Technologies Used
+
+- **Framework**: [Next.js 15](https://nextjs.org) with App Router
+- **Language**: TypeScript
+- **Styling**: SCSS/CSS Modules (no UI libraries)
+- **Testing**: Jest with React Testing Library
+- **Internationalization**: i18n support for English and German
+- 
+## Key Features
+
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Server-Side Rendering**: Utilizing Next.js SSR capabilities
+- **Internationalization**: Support for multiple languages (currently English and German)
+- **Modular Architecture**: Component-based structure for maintainability
+- **Type Safety**: Strict TypeScript configuration to ensure code quality
+- **Accessibility**: Focus on creating accessible UI components
+
+## Project Structure
+
+- `src/app`: Next.js App Router pages and layouts
+- `src/components`: Reusable UI components
+- `src/hooks`: Custom React hooks
+- `src/i18n`: Internationalization configuration and translations
+- `src/styles`: Global styles and variables
+- `__tests__`: Test files for components and utilities
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd cv-library-tha
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Run tests
+npm test
 
-## Learn More
+# Run tests with coverage
+npm run test:coverage
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Build the application
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start the production server
+npm start
+```
 
-## Deploy on Vercel
+## Component Highlights
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **JobsSearch**: Main component for searching jobs with tabs for Location and Industry views
+- **TabsComponent**: Reusable tabs interface for switching between different views
+- **LocationAutocomplete**: Autocomplete component for location search with API integration
+- **LanguageSwitcher**: Component for switching between available languages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API Integration
+
+The application integrates with the CV-Library API for location search:
+- Location API endpoint: `https://api.cv-library.co.uk/v1/locations?q={query}`
+- Requires at least two characters to return results
+
+## Styling Approach
+
+The project uses CSS Modules with SCSS for component styling, providing:
+- Scoped styles to prevent conflicts
+- Reusable variables for consistent theming
+- Responsive design with media queries
+- No external UI libraries to maintain lightweight bundle size
+
+## Brand Colors
+
+- Primary: #005DA4
+- Secondary: #003777
+- White: #FFFFFF
+- Green: #5BB543
+- Dark Gray: #333333
+- Light Blue: #4488D5
+- Black: #000000
+
+## Continuous Integration
+
+The project includes a GitHub Actions workflow that runs on pull requests and merges to the main branch:
+- Linting checks
+- Type checking
+- Unit tests with coverage reporting
+- Build verification
+
+## Deployment
+
+The application is deployed on Vercel with automatic deployments from the main branch.
