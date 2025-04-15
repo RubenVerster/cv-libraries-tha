@@ -25,7 +25,6 @@ export default function RootLayout(props: {
               <LanguageSwitcher currentLocale={locale} />
             </div>
             <Logo />
-            <div className="logo-container"></div>
           </div>
         </header>
         <main>{children}</main>

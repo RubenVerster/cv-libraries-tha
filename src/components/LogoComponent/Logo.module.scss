@@ -1,0 +1,9 @@
+.logo {
+  max-width: 500px;
+  height: auto;
+  transition: max-width 0.3s ease;
+
+  @media (max-width: 768px) {
+    max-width: 250px; /* 50% smaller on mobile */
+  }
+}
