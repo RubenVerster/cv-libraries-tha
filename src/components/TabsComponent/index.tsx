@@ -53,14 +53,17 @@ export default function TabsComponent({
       </div>
 
       <div className={styles.categoriesSection}>
-        <div className="container">
-          <div className={styles.categoriesContainer}>
-            {categoryList.map((category: string) => (
-              <a key={category} href="#" className={styles.categoryLink}>
-                {category}
-              </a>
-            ))}
-          </div>
+        <div className={styles.categoriesContainer}>
+          {categoryList.map((category: string) => (
+            <a
+              key={category}
+              target="_blank"
+              href="https://rubenverster.github.io/flip-the-coin/"
+              className={styles.categoryLink}
+            >
+              {category}
+            </a>
+          ))}
         </div>
       </div>
     </>
