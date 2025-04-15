@@ -111,9 +111,9 @@ export default function JobsSearch({ locale, initialView }: JobsSearchProps) {
               <div className={styles.distanceGroup}>
                 <label>{t("jobs:distance.label")}</label>
                 <select>
-                  <option>{t("jobs:distance.options.15")}</option>
                   <option>{t("jobs:distance.options.5")}</option>
                   <option>{t("jobs:distance.options.10")}</option>
+                  <option>{t("jobs:distance.options.15")}</option>
                   <option>{t("jobs:distance.options.20")}</option>
                   <option>{t("jobs:distance.options.30")}</option>
                 </select>
