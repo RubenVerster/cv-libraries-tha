@@ -7,7 +7,6 @@ import { useI18n } from "@/hooks/useI18n";
 import LocationAutocomplete from "@/components/LocationAutocomplete";
 import TabsComponent from "@/components/TabsComponent";
 import styles from "./JobsSearch.module.scss";
-import { BiSearch } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 
 interface JobsSearchProps {
